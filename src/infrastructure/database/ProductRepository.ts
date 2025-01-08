@@ -2,7 +2,6 @@ import { ProductRepository } from '../../domain/repositories/productRepository';
 import { Product } from '../../domain/models/product';
 import db from './sqliteDatabase';
 
-// Implementação da interface ProductRepository
 export class SqliteProductRepository implements ProductRepository {
     async addProduct(product: Product): Promise<void> {
         return new Promise((resolve, reject) => {

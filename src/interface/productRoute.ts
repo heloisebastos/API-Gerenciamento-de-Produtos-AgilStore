@@ -8,7 +8,7 @@ const createProductUseCase = new CreateProduct(productRepository);
 
 productRoutes.post('/products', async (req, res) => {
     const { name, category, quantity, price } = req.body;
-    const product = { id: 0, name, category, quantity, price }; // id será gerado automaticamente
+    const product = { id: 0, name, category, quantity, price };
 
     try {
         await createProductUseCase.execute(product);
