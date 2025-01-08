@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import productRoutes from './interface/productRoute';
 
 const app = express();
-const port = 3000;
+const port = 3333;
 
 app.use(bodyParser.json());
 app.use(productRoutes);
