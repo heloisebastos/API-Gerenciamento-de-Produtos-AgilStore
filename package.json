@@ -17,7 +17,8 @@
     "express": "^4.21.2",
     "mongoose": "^8.9.3",
     "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "uuid": "^11.0.4"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
