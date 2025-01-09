@@ -1,13 +1,16 @@
 import express from 'express';
-import bodyParser from 'body-parser';
-import productRoutes from './interface/productRoute';
+import productRoutes from './interface/routes/ProductRoutes';
+import jsonErrorMiddleware from './interface/utils/jsonErrorMiddleware'
 
 const app = express();
-const port = 3333;
 
-app.use(bodyParser.json());
-app.use(productRoutes);
+app.use(express.json());
+app.use(jsonErrorMiddleware);
 
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
+app.use('/agilstore', productRoutes);
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
 });
