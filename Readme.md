@@ -5,7 +5,7 @@ API de automação do gerenciamento de produtos da AgilStore
 # Sumário
 * [Visão Geral](#visão-geral)
 * [1. Introdução](#introdução)
-    * [1.1. Tecnoligas](#tecnologias)
+    * [1.1. Tecnologias](#tecnologias)
 * [2. Configurações de Ambiente ](#2-configurações-ambiente)
 * [3. Endpoint ](#3endpoints-da-api)
   * [Tabela de Endepoint da API](#tabela-de-endpoint-da-api)
@@ -44,7 +44,11 @@ A API foi desenvolvida utilizando as seguintes tecnologias:
 Os passos necessários para testar localmente são:
 
 - Instalar as ferramentas necessárias
-- Clonar o projeto : `git clone https://github.com/heloisebastos/API-Gerenciamento-de-Produtos-AgilStore.git`
+- Clonar o projeto 
+  ```plaintext
+        git clone https://github.com/heloisebastos/API-Gerenciamento-de-Produtos-AgilStore.git
+    ```
+
 - Executar o seguintes comandos na raiz do diretório
 
 
