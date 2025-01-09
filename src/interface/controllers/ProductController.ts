@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { CreateProductUseCase } from '../../application/use-case/createProduct';
 import { Product } from '../../domain/models/product';
-import { SqliteProductRepository } from '../../infrastructure/repositories/ProductRepositorySQLite';
+import { SqliteProductRepository } from '../../infrastructure/persistence/ProductRepositorySQLite';
 import { UpdateProductUseCase } from '../../application/use-case/updateProduct';
 import { DeleteProductUseCase } from '../../application/use-case/deleteProductUseCase'
 import { FindProductUseCase } from '../../application/use-case/findProductUseCase';
