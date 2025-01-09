@@ -44,17 +44,13 @@ A API foi desenvolvida utilizando as seguintes tecnologias:
 Os passos necessários para testar localmente são:
 
 - Instalar as ferramentas necessárias
-- Clonar o projeto : `git clone https://github.com/heloisebastos/Gerenciamento-de-Produtos-da-Loja-AgilStore.git`
+- Clonar o projeto : `git clone https://github.com/heloisebastos/API-Gerenciamento-de-Produtos-AgilStore.git`
 - Executar o seguintes comandos na raiz do diretório
 
 
   - Instalar o Express
     ````
     npm install express
-    ````
-  - Instale as dependências
-    ````
-    npm install
     ````
   - Executa o script start definido no package.json, utilizado para rodar a aplicação. 
     ```plaintext
