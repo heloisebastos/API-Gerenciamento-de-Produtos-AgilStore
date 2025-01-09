@@ -1,7 +1,7 @@
 import { ProductRepository } from '../../domain/repositories/productRepository';
 import { Product } from '../../domain/models/product';
 
-export class UpdateProduct {
+export class UpdateProductUseCase {
     constructor(private productRepository: ProductRepository) { }
 
     async execute(id: number, updatedData: Partial<Product>): Promise<void> {
