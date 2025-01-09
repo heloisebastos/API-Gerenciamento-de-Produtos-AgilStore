@@ -4,10 +4,10 @@ API de automação do gerenciamento de produtos da AgilStore
 -----------------------------------------------
 # Sumário
 * [Visão Geral](#visão-geral)
-* [1. Introdução](#introdução)
-    * [1.1. Tecnologias](#tecnologias)
+* [1. Introdução](#1-introdução)
+    * [1.1. Tecnologias](#11-tecnologias)
 * [2. Configurações de Ambiente ](#2-configurações-ambiente)
-* [3. Endpoint ](#3endpoints-da-api)
+* [3. Endpoint ](#3endpoints)
   * [Tabela de Endepoint da API](#tabela-de-endpoint-da-api)
 * [Estrutura do Projeto](#estrutura-do-projeto)
 -----------------------------------------------
