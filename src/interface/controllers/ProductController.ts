@@ -4,12 +4,13 @@ import { Product } from '../../domain/models/product';
 import { SqliteProductRepository } from '../../infrastructure/repositories/ProductRepositorySQLite';
 import { UpdateProductUseCase } from '../../application/use-case/updateProduct';
 import { DeleteProductUseCase } from '../../application/use-case/deleteProductUseCase'
+import { FindProductUseCase } from '../../application/use-case/findProductUseCase';
 
 const productRepository = new SqliteProductRepository;
 const createProduct = new CreateProductUseCase(productRepository);
 const updateProduct = new UpdateProductUseCase(productRepository);
 const deleteProduct = new DeleteProductUseCase(productRepository);
-
+const findProduct = new FindProductUseCase(productRepository);
 export class ProductController {
     async addProduct(req: Request, res: Response): Promise<void> {
         try {
@@ -83,4 +84,6 @@ export class ProductController {
             }
         }
     }
+
+    async getProduct(req: Request, res: Response): Promise<void> { try { const { id, name } = req.query; if (!id && !name) { res.status(400).send('Por favor, forneça um ID ou um nome para a busca'); return; } const query = { id: id ? Number(id) : undefined, name: name ? String(name) : undefined, }; const result = await findProduct.execute(query); res.status(200).json(result); } catch (error) { if (error instanceof Error) { res.status(404).send('Erro ao buscar produto: ' + error.message); } else { res.status(400).send('Erro desconhecido'); } } }
 }
