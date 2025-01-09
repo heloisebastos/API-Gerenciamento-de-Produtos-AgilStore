@@ -54,12 +54,9 @@ Os passos necessários para testar localmente são:
     ````
   - Executa o script start definido no package.json, utilizado para rodar a aplicação. 
     ```plaintext
-      npm  start
+        npm run start
     ```
-  - Esse script é usado durante o desenvolvimento com o nodemon, que reinicia o servidor automaticamente ao detectar alterações
-    ```plaintext
-        npm run dev
-    ```
+
 
 -----------------------------------------------
   # 3.Endpoints 
