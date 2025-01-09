@@ -128,16 +128,16 @@ Os passos necessários para testar localmente são:
   📂api-agilstore
    └───src
       ├───application
-      │   └───use-case -> casos de uso do sistema
+      │   └───use-case        -> casos de uso do sistema
       ├───domain
-      │   ├───models -> entidades de domínio da aplicação 
-      │   └───repositories -> interfaces de repositórios para abstrair o acesso a dados
+      │   ├───models          -> entidades de domínio da aplicação 
+      │   └───repositories    -> interfaces de repositórios para abstrair o acesso a dados
       ├───infrastructure
-      │   └───repositories -> comandam a persistência da aplicação
+      │   └───persistence     -> comandam a persistência da aplicação
       └───interface
-          ├───controllers -> controladores que recebem as requisições HTTP
-          ├───routes -> rotas da aplicação
-          └───utils -> classe utilitária para a aplicação
+          ├───controllers     -> controladores que recebem as requisições HTTP
+          ├───routes          -> rotas da aplicação
+          └───utils           -> classe utilitária para a aplicação
 
 
 ```
