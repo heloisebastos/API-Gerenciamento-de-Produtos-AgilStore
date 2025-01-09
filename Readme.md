@@ -135,8 +135,8 @@ Os passos necessários para testar localmente são:
       ├───infrastructure
       │   └───repositories -> comandam a persistência da aplicação
       └───interface
-          ├───controllers
-          ├───routes
+          ├───controllers -> controladores que recebem as requisições HTTP
+          ├───routes -> rotas da aplicação
           └───utils -> classe utilitária para a aplicação
 
 
