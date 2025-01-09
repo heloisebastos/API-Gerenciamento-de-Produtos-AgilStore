@@ -1,11 +1,12 @@
 import { Request, Response } from 'express';
-import { CreateProduct } from '../../application/use-case/CreateProduct';
+import { CreateProduct } from '../../application/use-case/createProduct';
 import { Product } from '../../domain/models/product';
 import { SqliteProductRepository } from '../../infrastructure/repositories/ProductRepositorySQLite';
+import { UpdateProduct } from '../../application/use-case/updateProduct';
+
 const productRepository = new SqliteProductRepository;
 const createProduct = new CreateProduct(productRepository);
-
-
+const updateProduct = new UpdateProduct(productRepository);
 export class ProductController {
     async addProduct(req: Request, res: Response): Promise<void> {
         try {
@@ -36,6 +37,8 @@ export class ProductController {
         }
     }
 
+    async updateProduct(req: Request, res: Response): Promise<void> { try { const { id } = req.params; const updatedData = req.body; await updateProduct.execute(Number(id), updatedData); res.status(200).send('Produto atualizado com sucesso!'); } catch (error) { if (error instanceof Error) { res.status(404).send('Erro ao atualizar produto: ' + error.message); } else { res.status(400).send('Erro desconhecido'); } } }
 
+    async updateProductPatch(req: Request, res: Response): Promise<void> { try { const { id } = req.params; const updatedData = req.body; await updateProduct.execute(Number(id), updatedData); res.status(200).send('Produto atualizado parcialmente com sucesso!'); } catch (error) { if (error instanceof Error) { res.status(404).send('Erro ao atualizar produto: ' + error.message); } else { res.status(400).send('Erro desconhecido'); } } }
 
 }
